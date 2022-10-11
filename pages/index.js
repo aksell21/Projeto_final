@@ -25,12 +25,11 @@ return (
         </div>
       </div>  
 
-      <div className={styles.criarbunker}>
-        <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
-        </div>
-
-
-      <div className={styles.login}>
+    
+       
+      
+      <div className={styles.login}> 
+       <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
         <Link href={'/Singup'}><button className={styles.button_singup}>SingUp</button></Link>
       </div>

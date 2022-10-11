@@ -17,11 +17,11 @@ function Singup() {
         <div className="">
             <h1>Register</h1>
             <input type="text" placeholder='Email'></input>
-            <input type="password" placeholder='Password'></input>
+            <input type="password" placeholder='Password'></input>x
             <input type="password" placeholder='PasswordConfirm'></input>
             <button className={styles.singup} >SingUp</button>
             <Link href="/" ><button>Voltar</button></Link>
-        </div>
+        </div>  
         
      
     )

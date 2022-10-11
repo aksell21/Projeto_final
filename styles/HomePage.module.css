@@ -37,11 +37,17 @@
 
 .search input {
   height: calc(inherit);
+  width: 10cm;
+  background-color: transparent;
+  border: 2px solid white;
+  margin-top: 10px;
 }
 
 .search svg {
   position: absolute;
   right: 0px;
+  margin-top: 10px;
+  color: white;
 }
 
 

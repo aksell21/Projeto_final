@@ -1,5 +1,5 @@
-import {MongoClient, ObjectId} from 'mongodb'
-const URL = process.env.MONGO_URL ?? 'mongodb://localhost:3030';
+import {MongoClient} from 'mongodb';
+const URL = process.env.MONGO_URL ?? 'mongodb://localhost:27017';
 let client
 
 const DATABASE = "Project_final"

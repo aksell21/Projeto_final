@@ -21,9 +21,3 @@ export async function addUser(user) {
 }
 
 
-
-module.exports = {
-    getUserByEmail,
-    addUser,
-    getUserById
-}

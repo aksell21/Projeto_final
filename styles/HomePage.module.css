@@ -14,8 +14,27 @@
   display: flex;
   flex-direction: row ;
 }
-.button{
+.login{
+  display:flex;
+  align-items: center;
+}
+
+.button_login{
   margin: auto;
+  padding :auto ;
+  background-color:black; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button_singup{
+  margin: auto;
+  padding: auto;
   background-color:black; /* Green */
   border: none;
   color: white;
@@ -39,15 +58,15 @@
   height: calc(inherit);
   width: 10cm;
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid black;
   margin-top: 10px;
 }
 
 .search svg {
-  position: absolute;
+  position:auto;
   right: 0px;
   margin-top: 10px;
-  color: white;
+  color: black;
 }
 
 
@@ -71,5 +90,13 @@
    text-align: center;
    width: 200px;
    height: 200px ;
+}
+.searchBar{
+  display : flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.search {
+  display :flex;
 }
 

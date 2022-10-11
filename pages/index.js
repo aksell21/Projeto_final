@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import Login from './Login'
+import Singup from './Singup'
 import styles from '../styles/HomePage.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 
 
 
+
 export default function Home() {
-  const [form,setForm]  = useState ({})
   
 return (
   <div className={styles.container}>
@@ -19,17 +20,19 @@ return (
 
       <div className={styles.searchBar}>
         <div className={styles.search}> 
-        <SearchIcon />
+         <SearchIcon/>
           <input type="text" placeholder="Search.." />
         </div>
-        <div>
+      </div>  
+
+      <div className={styles.criarbunker}>
         <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
         </div>
 
-      </div>
 
       <div className={styles.login}>
-        <Link href={'/Login'}><button className={styles.button}>Login</button></Link>
+        <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
+        <Link href={'/Singup'}><button className={styles.button_singup}>SingUp</button></Link>
       </div>
 
     </div>

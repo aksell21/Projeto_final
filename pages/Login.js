@@ -29,8 +29,7 @@ function Login(props) {
            
         </div>
     )
-}
-
+}export default Login
 
 
 
@@ -65,4 +64,4 @@ function Login(props) {
 //     </div>
 // )
 //   }
-export default Login
+

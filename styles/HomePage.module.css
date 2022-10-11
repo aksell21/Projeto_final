@@ -15,7 +15,6 @@
   flex-direction: row ;
 }
 
-<<<<<<< HEAD
 .body{
     padding: 5px ;
     text-align: center;
@@ -24,7 +23,7 @@
     display: flex;
     justify-content: space-around ;
 }
-=======
+
 .search input {
   height: calc(inherit);
   width: 10cm;
@@ -56,7 +55,6 @@
   justify-content: space-around;
 }
 
->>>>>>> c4fe1479d4376a9de802efdb0a65aac04da8d3ca
 .squares {
    border: solid black  ;  
    text-align: center;

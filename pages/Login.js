@@ -1,4 +1,6 @@
+import styles from '../styles/LoginPage.module.css'
 import { useState } from "react";
+
 
 function Login(props) {
     const [authValues, setAuthValues] = useState({ username: "", password: "" })
@@ -12,7 +14,7 @@ function Login(props) {
     }
 
     return (
-        <div className="">
+        <div className={styles.container}>
             <input
                 type="text"
                 value={authValues.username}
@@ -21,6 +23,7 @@ function Login(props) {
                 type="password"
                 value={authValues.password}
                 onChange={(e) => setAuthValues(prevAuthValues => ({ ...prevAuthValues, password: e.target.value }))} />
+                
             <button type="submit" onClick={() => handleAuthenticate()}>Login</button>
         </div>
     )
@@ -45,7 +48,6 @@ function Login(props) {
 //         <div className={styles.login}>
 //             <p className={styles.label}>Username:</p>
 //             <input
-
 //                 type="text"
 //                 value={authValues.username}
 //                 onChange={(e) => setAuthValues(prevAuthValues => ({ ...prevAuthValues, username: e.target.value }))} />

@@ -1,5 +1,6 @@
 import styles from '../styles/LoginPage.module.css'
 import { useState } from "react";
+import Link from 'next/link';
 
 
 function Login(props) {
@@ -12,7 +13,6 @@ function Login(props) {
                 credencial.password === authValues.password))?.username
         )
     }
-
     return (
         <div className={styles.container}>
             <input
@@ -25,6 +25,8 @@ function Login(props) {
                 onChange={(e) => setAuthValues(prevAuthValues => ({ ...prevAuthValues, password: e.target.value }))} />
                 
             <button type="submit" onClick={() => handleAuthenticate()}>Login</button>
+            <Link href="/" ><button type="button">Voltar</button></Link>
+           
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Login from './Login_v4/Login'
+import Login from './Login'
 import styles from '../styles/HomePage.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 
 export default function Home() {
+  const [form,setForm]  = useState ({})
   
 return (
   <div className={styles.container}>
@@ -15,17 +16,22 @@ return (
       <div className={styles.headeritem}> 
         <h1>Logo</h1>
       </div>
+
       <div className={styles.searchBar}>
-        <div className={styles.search}>
+        <div className={styles.search}> 
+        <SearchIcon />
           <input type="text" placeholder="Search.." />
-          <SearchIcon />
         </div>
+        <div>
+        <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
+        </div>
+
       </div>
+
       <div className={styles.login}>
-        <from>
-        <Link href={'/Login'}>Login</Link>
-        </from>
+        <Link href={'/Login'}><button className={styles.button}>Login</button></Link>
       </div>
+
     </div>
     <div className={styles.header}>
       <div className={styles.retangulo}>

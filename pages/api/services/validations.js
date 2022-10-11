@@ -76,6 +76,3 @@ function cleanUndefinedProperties(obj) {
             {})
 }
 
-module.exports = {
-    validateFields
-}

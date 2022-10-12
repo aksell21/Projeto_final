@@ -6,7 +6,7 @@ export async function validateFields({
     password,
     passwordConfirmation,
     acceptsTerms,
-    acceptsCommunications
+ 
 }) {
     const errors = cleanUndefinedProperties({
         email: await getEmailErrors(email),

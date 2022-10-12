@@ -29,7 +29,8 @@ return (
       <div className={styles.login}> 
        <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
-        <Link href={'/Singup'}><button className={styles.button_singup}>SingUp</button></Link>
+        <Link href={'/Singup'}><button className={styles.button_singup}>SignUp</button></Link>
+        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
       </div>
 
     </div>

@@ -1,51 +1,38 @@
-.header  {
-    border: solid black  ;  
-    display: flex;
-    flex-direction: row;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    border: 0ch;
+.header {
+  border: solid black;
+  display: flex;
+  flex-direction: row;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  border: 0ch;
+  text-align: center;
 }
-/* .header_center input[type=text] {
- font-size: 20px;  
- display: flex; 
- align-items: center;
-}  */
-.container_singup{
-    border: solid black  ;  
-    height: inherit;
-    width: auto;
+
+.container_singup {
+  border: solid black;
+  height: inherit;
+  width: auto;
 }
 
 .headeritem {
-  flex: 1;
+  flex: 3;
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
+
 }
-.login{
-  display:flex;
+
+.login {
+  display: flex;
   align-items: right;
 }
 
-.button_login{
-  margin: auto;
-  padding :auto ;
-  background-color:black; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button_singup{
+.button_login {
   margin: auto;
   padding: auto;
-  background-color:black; /* Green */
+  background-color: black;
+  /* Green */
   border: none;
   color: white;
   text-align: center;
@@ -55,13 +42,26 @@
   cursor: pointer;
 }
 
-.body{
-    padding: 5px ;
-    text-align: center;
-    border: solid black  ;  
-    margin: 6px ; 
-    display: flex;
-    justify-content: space-around ;
+.button_singup {
+  margin: auto;
+  padding: auto;
+  background-color: black;
+  /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.body {
+  padding: 5px;
+  text-align: center;
+  margin: 6px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .search input {
@@ -88,9 +88,16 @@
 .body {
   padding: 5px;
   text-align: center;
-  margin: 6px;
+  margin: 6px auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+  max-width: 1200px;
+
 }
 
 .details {
@@ -101,34 +108,59 @@
 }
 
 .squares {
-   border: solid black  ;  
-   text-align: center;
-   width: 200px;
-   height: 200px ;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
 }
-.searchBar{
-  display : inline-block;
+
+.searchBar {
+  display: inline-block;
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
   border: white;
-  position:initial
+  position: initial
 }
+
 .search {
-  display :flex;
+  display: flex;
   border: white;
 }
 
-.button_login{
+.button_login {
   margin-left: 10cm;
   margin-bottom: 10cm;
 }
 
-.button_singup{
+.button_singup {
   margin-left: 10cm;
   margin-bottom: 10cm;
 }
-.header h1{
+
+.header h1 {
   color: white;
-  position: relative; left: 80px;
+  position: relative;
+  left: 50px;
+  padding-top: 70px;
+  text-align: left;
+  text-align: justify;
+}
+
+.header h5 {
+  color: white;
+  padding-top: 250px;
+}
+
+.BunkerImage img {
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
+
+.Dados {
+  text-align: left;
 }

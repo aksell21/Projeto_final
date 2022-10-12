@@ -2,6 +2,11 @@
     border: solid black  ;  
     display: flex;
     flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    border: 0ch;
 }
 /* .header_center input[type=text] {
  font-size: 20px;  
@@ -16,7 +21,7 @@
 }
 .login{
   display:flex;
-  align-items: center;
+  align-items: right;
 }
 
 .button_login{
@@ -44,11 +49,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-.criarbunker{
-  border : black 3px;
-  width:50px;
-  height:50px;
-}
 
 .body{
     padding: 5px ;
@@ -63,15 +63,20 @@
   height: calc(inherit);
   width: 10cm;
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid white;
   margin-top: 10px;
+  margin-bottom: 350px;
+  color: white;
+  position: center;
 }
 
 .search svg {
-  position:auto;
   right: 0px;
   margin-top: 10px;
   color: black;
+  position: absolute;
+  margin-right: 215px;
+  color: white;
 }
 
 
@@ -97,11 +102,28 @@
    height: 200px ;
 }
 .searchBar{
-  display : flex;
+  display : inline-block;
   justify-content: space-around;
   align-items: center;
+  background-color: transparent;
+  border: white;
+  position:initial
 }
 .search {
   display :flex;
+  border: white;
 }
 
+.button_login{
+  margin-left: 10cm;
+  margin-bottom: 10cm;
+}
+
+.button_singup{
+  margin-left: 10cm;
+  margin-bottom: 10cm;
+}
+.header h1{
+  color: white;
+  position: relative; left: 80px;
+}

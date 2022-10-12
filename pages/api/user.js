@@ -27,6 +27,7 @@ export default async function (req,res){
     res.status(200)
         .json({
             _id: user._id,
+            user: user.user,
             email: user.email,
             acceptsTerms: user.acceptsTerms,
             acceptsCommunications: user.acceptsCommunications

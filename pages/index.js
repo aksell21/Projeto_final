@@ -6,6 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 
 
+<<<<<<< HEAD
 function Header(){
   return (
     <div className={styles.header}
@@ -14,6 +15,19 @@ function Header(){
       <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5>
       <div className={styles.headeritem}>
         <h2>Logo</h2>
+=======
+
+
+export default function Home() {
+  
+return (
+  <div className={styles.container}>
+
+    <div className={styles.header}>
+       
+      <div className={styles.headeritem}> 
+        <h1>Logo</h1>
+>>>>>>> 58e5d0885c5268dc214a9dba4b865c16937c111f
       </div>
 
       <div className={styles.searchBar}>
@@ -23,9 +37,6 @@ function Header(){
         </div>
       </div>  
 
-    
-       
-      
       <div className={styles.login}> 
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
         <Link href={'/Singup'}><button className={styles.button_singup}>Sign Up</button></Link>

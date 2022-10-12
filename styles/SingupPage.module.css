@@ -1,9 +1,22 @@
 
-.container {
-    padding: 5px ;
-    text-align: center;
-    border: solid black  ;  
-    margin: 6px ; 
-    display: flex;
-    justify-content: space-around ;
+.container_singup{
+    display : flex ;
+    border: solid black;  
+    flex-direction: row ;
+    justify-content : center;
 }
+
+.row{
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column ;
+        
+}
+.terms {
+    display : flex ; 
+    flex-direction: row ;
+    justify-content: center;
+
+}
+
+

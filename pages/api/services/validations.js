@@ -47,7 +47,7 @@ function getPasswordErrors(password) {
     if (password.length < 8) {
         return "A sua password deve ter no mínimo 8 caracteres."
     }
-    if (checkPasswordStrength(password) < 4) {
+    if (checkPasswordStrength(password) < 2) {
         return "A sua password deve ter pelo menos um número, uma mínuscula, uma maiúscula e um símbolo."
     }
 }

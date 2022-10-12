@@ -6,16 +6,19 @@ import { validateFields } from "./services/validations"
 export default async function (req,res){
     if(req.method === "POST" ){
         const {
+            user,
             email,
             password,
             passwordConfirmation,
             acceptsTerms,
             acceptsCommunications
         } = req.body
+    console.log("Cheguei")
     
         const validation = await validateFields(req.body)
         if (validation.success) {
             const id = await addUser({
+                user,
                 email,
                 password,
                 passwordConfirmation,

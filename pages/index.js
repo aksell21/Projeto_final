@@ -14,6 +14,7 @@ return (
   <div className={styles.container}>
 
     <div className={styles.header}>
+       
       <div className={styles.headeritem}> 
         <h1>Logo</h1>
       </div>
@@ -25,9 +26,6 @@ return (
         </div>
       </div>  
 
-    
-       
-      
       <div className={styles.login}> 
        <Link href={'/criarbunker'}><button className={styles.button}>Criar Bunker</button></Link>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>

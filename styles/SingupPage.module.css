@@ -1,23 +1,39 @@
 
 .container_singup{
-    display : flex ;
-    border: solid black;  
+    display : flex ; 
     flex-direction: row ;
     justify-content : center;
-    background-image: url(/public/header.png);
+    background-image: url(../public/banner-home-page.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+.row button{
+    
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: medium; 
 }
 
 .row{
-        padding-top: 100px;
         display: flex;
+        justify-content: center;
         flex-direction: column ;
-        
+        font-size: xx-large ;
+        color: white ;
 }
+.row input{
+    height:22px ;
+}
+
 .terms {
     display : flex ; 
     flex-direction: row ;
     justify-content: center;
-
+    font-size: medium ;
 }
 
 

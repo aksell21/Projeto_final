@@ -67,7 +67,7 @@ function Singup() {
          <button type="submit" 
          onClick={ () =>  handleSubmit() }>SingUp</button>
          <span>{mensagem}</span>
-        <Link href="/" ><button type="button">Voltar</button></Link>
+        <Link href="/" ><button type="button" >Voltar</button></Link>
     </div>
   
 </div>    

@@ -77,7 +77,12 @@ function Header() {
 
       <div className={styles.login}>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
+<<<<<<< HEAD
         <Link href={'/Singup'}><button className={styles.button_singup}>Sign Up</button></Link>
+=======
+        <Link href={'/Singup'}><button className={styles.button_singup}>SignUp</button></Link>
+        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
+>>>>>>> 6622034effce429ea857ee20355a7af47f96aa6a
       </div>
 
     </div>

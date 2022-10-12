@@ -1,0 +1,6 @@
+.container_profile{
+    display : flex ;
+    border: solid black;  
+    flex-direction: row ;
+    justify-content : center;
+}

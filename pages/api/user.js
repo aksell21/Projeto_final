@@ -30,7 +30,6 @@ export default async function (req,res){
             user: user.user,
             email: user.email,
             acceptsTerms: user.acceptsTerms,
-            acceptsCommunications: user.acceptsCommunications
         })
    }
 }

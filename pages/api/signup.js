@@ -11,7 +11,7 @@ export default async function (req,res){
             password,
             passwordConfirmation,
             acceptsTerms,
-            acceptsCommunications
+           
         } = req.body
     console.log("Cheguei")
     
@@ -23,7 +23,6 @@ export default async function (req,res){
                 password,
                 passwordConfirmation,
                 acceptsTerms,
-                acceptsCommunications
             })
             res.status(201)
                 .json({

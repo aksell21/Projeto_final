@@ -6,9 +6,12 @@ import { fazPedido } from './src/Utils/res';
 
 function Login() {
     const [authValues, setAuthValues] = useState({ email: "", password: "" })
+    const [erro,setError] = useState("")
 
     const handleAuthenticate = async () => {
         const  res =  await fazPedido("/api/login/","POST",authValues)
+        setAuthValues(res.body) 
+        
            
     }
 

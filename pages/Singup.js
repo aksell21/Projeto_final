@@ -15,11 +15,10 @@ function Singup() {
   const  resultado =  await fazPedido("/api/signup/","POST",user)
 
   if(resultado.status === 400 ){
-    setErro(resultado.body.errors)
+    setErro(resultado.body.message)
   }
   
     setMensagem(resultado.body.message)
-  
 
  }
     return (

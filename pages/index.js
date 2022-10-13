@@ -214,6 +214,10 @@ function BunkerCard({ data }) {
     path = data.imagePath
     bunker = "/Bunkers/Bunker1"
   }
+  if(data.imagePath == "/Bunker3/4A.jpg"){
+    path = data.imagePath
+    bunker = "/Bunkers/Bunker2"
+  }
   return (
     <div>
       <div className={styles.upper}>

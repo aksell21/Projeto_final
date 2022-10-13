@@ -10,20 +10,20 @@ import { Style } from '@mui/icons-material';
 
 const bunkers = [
     {
-        imagePath: "/Bunker2/3a.jpg",
-        name: "LAS VEGAS UNDERGROUND",
-        price: "18 M",
+        imagePath: "/Bunker3/4A.jpg",
+        name: "THE SAFE HOUSE",
+        price: "3 M",
         location: {
-          city: "Las Vegas",
-          country: "United States"
+        city: "Warsam",
+        country: "Poland"
         },
-        tags: ["eartquake", "iceage"],
+        tags: ["meteoro", "missiles"],
         help: "Feel free to contact us, for any question you might have. Our team is always avaiable to help you find a secure space for you and your loved ones to survive doomsday.",
         intro: "Not only for survival shelter but it is also planned as completely self-sufficient second home",
         description: "É um bunker em frança onde pode desfrutar de umas belas férias longe da humanidade e para sobreviver a catastrofes como terramoto ou radiação.",
         container: "10 GUESTS•2 BEDROOMS•2 BATHS• GREEN HOUSE",
-        tagB: "/Icones_Catastrofes/iceage.png",
-        tagE: "/Icones_Catastrofes/earthquake.png",
+        tagB: "/Icones_Catastrofes/meteoro.png",
+        tagE: "/Icones_Catastrofes/missiles.png",
       },
 ]
 

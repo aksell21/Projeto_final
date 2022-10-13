@@ -105,20 +105,19 @@ function Header() {
       <div><h1>LOOKING TO
         SURVIVE IN STYLE?</h1>
       <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5></div>
-      <div className={styles.headeritem}>
-      </div>
 
-      <div className={styles.searchBar}>
-        <div className={styles.search}>
-          <SearchIcon />
-          <input type="text" placeholder="Search.." />
-        </div>
-      </div>
+
+      
 
       <div className={styles.login}>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
+        </div>
+      <div className={styles.login}>
         <Link href={'/Singup'}><button className={styles.button_singup}>SignUp</button></Link>
-        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
+        
+      </div>
+      <div className={styles.login}>
+      <Link href={'/Perfil'}><button className={styles.button_perfil}>Perfil</button></Link>
       </div>
 
     </div>
@@ -142,7 +141,7 @@ export default function Home() {
         <BunkerCard data={bunkers[5]}></BunkerCard>
         <BunkerCard data={bunkers[6]}></BunkerCard>
         <BunkerCard data={bunkers[7]}></BunkerCard>
-        <BunkerCard data={bunkers[8]}></BunkerCard>
+        
 
       </div>
       <div className={styles.parte2}>
@@ -243,3 +242,12 @@ function BunkerCard({ data }) {
 
   )
 }
+
+/*
+<div className={styles.searchBar}>
+        <div className={styles.search}>
+          <SearchIcon />
+          <input type="text" placeholder="Search.." />
+        </div>
+      </div>
+*/

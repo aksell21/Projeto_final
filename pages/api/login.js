@@ -1,13 +1,14 @@
-import { getUserByEmail } from "./data/sessions"
+import { getUserByEmail } from "./data/users"
+import { addSession } from "./data/session"
 
 
-export default async function (req,res){
-    if(req.method === "POST" ){
+export default async function (req, res) {
+    if (req.method === "POST") {
         const {
             email,
             password
         } = req.body
-    
+
         const user = await getUserByEmail(email)
         if (!user) {
             return res
@@ -22,6 +23,11 @@ export default async function (req,res){
                 .json({
                     "message": "A password introduzida é inválida!"
                 })
+
+        }
+       const token = await addSession(user._id)
+       res.status(200).json({token})
+      
+
     }
-}
 }

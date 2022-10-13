@@ -171,7 +171,7 @@
 }
 
 .icones {
-  width: 22%;
+  width: 100px;
   height: auto;
   position: relative;
   display: flex;
@@ -179,11 +179,12 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-items: center;
-  
+  transform: translate(150px, 0px)
 
 }
 
 .formas {
+  width: 1000px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -204,4 +205,8 @@ padding-top: 70px;
 .tags img{
  width: 30px;
 grid-row: auto;
+}
+
+.Dados{
+  transform: translate(90px, 0px)
 }

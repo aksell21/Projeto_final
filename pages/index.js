@@ -153,14 +153,18 @@ export default function Home() {
           <img src={"/Icones_Catastrofes/cyber.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/earthquake.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/iceage.png"} className={styles.icones} />
+
+
+        </div>
+        <div className={styles.formas}>
           <img src={"/Icones_Catastrofes/meteoro.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/missiles.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/nuclear.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/solarflares.png"} className={styles.icones} />
-          <img src={"/Icones_Catastrofes/tsunami.png"} className={styles.icones} />
+        </div>
+        <div className={styles.formas}>
+        <img src={"/Icones_Catastrofes/tsunami.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/vulcanism.png"} className={styles.icones} />
-
-
         </div>
       </div>
 
@@ -227,9 +231,9 @@ function BunkerCard({ data }) {
       </div>
       <div className={styles.lower}>
         <div className={styles.Dados}>
-          <div className={style.Nomes}>{data.name}</div>
-          <div className={style.Preços}>{data.location.city}, {data.location.country}</div>
-          <div className={style.Local}>{data.price} €</div>
+          <div className={styles.Nomes}>{data.name}</div>
+          <div className={styles.Preços}>{data.location.city}, {data.location.country}</div>
+          <div className={styles.Local}>{data.price} €</div>
         </div>
         <div className={styles.tags}>
           {data.tags.map(t => <img src={`/Icones_Catastrofes/${t}.png`}></img>)}

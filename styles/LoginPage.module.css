@@ -17,12 +17,15 @@
     align-items: center;
     color: white;
 }
+
 .span {
     color: white ;
 }
+
 .LoginCard input {
   height: 20px;
   width: 350px;
+  border-radius: 4px;
 }
 
 

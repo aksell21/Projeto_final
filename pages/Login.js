@@ -20,7 +20,7 @@ function Login() {
             setError(res.body.errors)
           }
           setMensagem(res.body.message)
-    
+
     }
 
     return (
@@ -41,14 +41,14 @@ function Login() {
                  {erro.password && <div>{erro.password}</div>}
                 
                 <span>{mensagem}</span>
-                <button className={styles.button19} role="button"  onClick={() => handleAuthenticate()} >Login</button>
+                <button className={styles.button19} role="button"  onClick={() => handleAuthenticate()} >Login</button>  
+                
+        <Link href="/" ><button type="button"
+         className={styles.buttonvoltar}
+          >Voltar</button></Link>
 
         </div>
-
-        
-
-      
-            <Link href="/" ><button type="button">Voltar</button></Link>
+       
     </div>
     )
 }export default Login

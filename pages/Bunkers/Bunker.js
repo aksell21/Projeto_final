@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Login from './Login'
-import Singup from './Singup'
-import styles from '../styles/HomePage.module.css'
-import stylo from '../styles/bunkerPage.module.css'
+import Login from '../Login'
+import Singup from '../Singup'
+import styles from '../../styles/HomePage.module.css'
+import stylo from '../../styles/bunkerPage.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { style } from '@mui/system';
@@ -20,7 +20,9 @@ const bunkers = [
       city: "Nantes",
       country: "France"
     },
-    tags: ["biochemical", "earthquake"],
+    tags: ["biochemical", "cyber"],
+    tagB: "/Icones_Catastrofes/biochemical.png",
+    tagE: "/Icones_Catastrofes/cyber.png",
     help: "Feel free to contact us, for any question you might have. Our team is always avaiable to help you find a secure space for you and your loved ones to survive doomsday."
   },
 ]
@@ -99,8 +101,8 @@ function BunkerCard({ data }) {
             <div className={stylo.price}>{data.price} €</div>
             <button className={stylo.button} onClick={() => alert("Comprado com sucesso")}>Buy Now</button>
             <h2>Protection Against</h2>
-            <img src={data.imagePath} className={stylo.icons}/>
-            <img src={data.imagePath} className={stylo.icons}/>
+            <img src={data.tagB} className={stylo.icons} alt={"Olá"}/>
+            <img src={data.tagE} className={stylo.icons}/>
 
             <h2>Description</h2>
             <div className={stylo.description}>{data.description}</div>

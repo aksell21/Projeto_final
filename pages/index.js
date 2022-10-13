@@ -26,7 +26,7 @@ const bunkers = [
       city: "Las Vegas",
       country: "United States"
     },
-    tags: ["eartquake", "iceage"]
+    tags: ["earthquake", "iceage"]
   },
   {
     imagePath: "/Bunker3/4A.jpg",
@@ -204,11 +204,25 @@ export default function Home() {
 
 
 function BunkerCard({ data }) {
+  let path = ""
+  let bunker = ""
+  if(data.imagePath == "/Bunker1/1a.jpg"){
+    path = data.imagePath
+    bunker = "/Bunkers/Bunker"
+  }
+  else if(data.imagePath == "/Bunker2/3a.jpg"){
+    path = data.imagePath
+    bunker = "/Bunkers/Bunker1"
+  }
+  if(data.imagePath == "/Bunker3/4A.jpg"){
+    path = data.imagePath
+    bunker = "/Bunkers/Bunker2"
+  }
   return (
     <div>
       <div className={styles.upper}>
         <div className={styles.BunkerImage}>
-          <img src={data.imagePath} />
+          <Link href={bunker}><img src={data.imagePath} /></Link>
         </div>
       </div>
       <div className={styles.lower}>

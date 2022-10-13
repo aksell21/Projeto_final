@@ -105,20 +105,19 @@ function Header() {
       <div><h1>LOOKING TO
         SURVIVE IN STYLE?</h1>
       <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5></div>
-      <div className={styles.headeritem}>
-      </div>
 
-      <div className={styles.searchBar}>
-        <div className={styles.search}>
-          <SearchIcon />
-          <input type="text" placeholder="Search.." />
-        </div>
-      </div>
+
+      
 
       <div className={styles.login}>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
+        </div>
+      <div className={styles.login}>
         <Link href={'/Singup'}><button className={styles.button_singup}>SignUp</button></Link>
-        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
+        
+      </div>
+      <div className={styles.login}>
+      <Link href={'/Perfil'}><button className={styles.button_perfil}>Perfil</button></Link>
       </div>
 
     </div>
@@ -142,7 +141,7 @@ export default function Home() {
         <BunkerCard data={bunkers[5]}></BunkerCard>
         <BunkerCard data={bunkers[6]}></BunkerCard>
         <BunkerCard data={bunkers[7]}></BunkerCard>
-        <BunkerCard data={bunkers[8]}></BunkerCard>
+        
 
       </div>
       <div className={styles.parte2}>
@@ -153,14 +152,18 @@ export default function Home() {
           <img src={"/Icones_Catastrofes/cyber.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/earthquake.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/iceage.png"} className={styles.icones} />
+
+
+        </div>
+        <div className={styles.formas}>
           <img src={"/Icones_Catastrofes/meteoro.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/missiles.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/nuclear.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/solarflares.png"} className={styles.icones} />
-          <img src={"/Icones_Catastrofes/tsunami.png"} className={styles.icones} />
+        </div>
+        <div className={styles.formas}>
+        <img src={"/Icones_Catastrofes/tsunami.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/vulcanism.png"} className={styles.icones} />
-
-
         </div>
       </div>
 
@@ -227,9 +230,9 @@ function BunkerCard({ data }) {
       </div>
       <div className={styles.lower}>
         <div className={styles.Dados}>
-          <div className={style.Nomes}>{data.name}</div>
-          <div className={style.Preços}>{data.location.city}, {data.location.country}</div>
-          <div className={style.Local}>{data.price} €</div>
+          <div className={styles.Nomes}>{data.name}</div>
+          <div className={styles.Preços}>{data.location.city}, {data.location.country}</div>
+          <div className={styles.Local}>{data.price} €</div>
         </div>
         <div className={styles.tags}>
           {data.tags.map(t => <img src={`/Icones_Catastrofes/${t}.png`}></img>)}
@@ -239,3 +242,12 @@ function BunkerCard({ data }) {
 
   )
 }
+
+/*
+<div className={styles.searchBar}>
+        <div className={styles.search}>
+          <SearchIcon />
+          <input type="text" placeholder="Search.." />
+        </div>
+      </div>
+*/

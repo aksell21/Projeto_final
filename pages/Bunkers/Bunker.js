@@ -30,23 +30,23 @@ const bunkers = [
 function Header() {
   return (
     <div className={styles.header}
-      style={{ backgroundImage: "url(/header.jpg)" }}>
+    style={{ backgroundImage: "url(/header.jpg)" }}>
+    <img src={"./logo.png"} className={styles.logo} />
       <div className={styles.headeritem}>
       </div>
 
-      <div className={styles.searchBar}>
-        <div className={styles.search}>
-          <SearchIcon />
-          <input type="text" placeholder="Search.." />
-        </div>
-      </div>
 
       <div className={styles.login}>
         <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
-        <Link href={'/Singup'}><button className={styles.button_singup}>Sign Up</button></Link>
-        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
-
+        </div>
+      <div className={styles.login}>
+        <Link href={'/Singup'}><button className={styles.button_singup}>SignUp</button></Link>
+        
       </div>
+      <div className={styles.login}>
+      <Link href={'/Perfil'}><button className={styles.button_perfil}>Perfil</button></Link>
+      </div>
+
 
     </div>
   )

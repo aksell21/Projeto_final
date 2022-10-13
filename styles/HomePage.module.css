@@ -24,36 +24,44 @@
 }
 
 .login {
-  display: flex;
-  align-items: right;
+  position: relative;
 }
 
 .button_login {
-  margin: auto;
-  padding: auto;
   background-color: black;
   /* Green */
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  
 }
 
 .button_singup {
-  margin: auto;
-  padding: auto;
+ 
   background-color: black;
   /* Green */
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  transform: translate(-360px, 0px)
+}
+.button_perfil {
+ 
+  background-color: black;
+  /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transform: translate(-350px, 0px)
 }
 
 .body {
@@ -115,19 +123,9 @@
   flex-direction: column;
 }
 
-.searchBar {
-  display: inline-block;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
-  border: white;
-  position: initial
-}
 
-.search {
-  display: flex;
-  border: white;
-}
+
+
 
 .button_login {
   margin-left: 10cm;
@@ -171,7 +169,7 @@
 }
 
 .icones {
-  width: 22%;
+  width: 100px;
   height: auto;
   position: relative;
   display: flex;
@@ -179,11 +177,12 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-items: center;
-  
+  transform: translate(150px, 0px)
 
 }
 
 .formas {
+  width: 1000px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -204,4 +203,8 @@ padding-top: 70px;
 .tags img{
  width: 30px;
 grid-row: auto;
+}
+
+.Dados{
+  transform: translate(90px, 0px)
 }

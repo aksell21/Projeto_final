@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Login from './Login'
-import Singup from './Singup'
-import styles from '../styles/HomePage.module.css'
-import stylo from '../styles/bunkerPage.module.css'
+import Login from '../Login'
+import Singup from '../Singup'
+import styles from '../../styles/HomePage.module.css'
+import stylo from '../../styles/bunkerPage.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { style } from '@mui/system';

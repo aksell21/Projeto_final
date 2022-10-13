@@ -1,0 +1,37 @@
+.bunker{
+    width: 400px;
+    height: 300px;
+    display:flex;
+}
+.bunker1{
+    width: 200px;
+    height: 150px;
+    padding-left: 24px;
+    transform: translate(23.5px, 0px);
+}
+.bunker2{
+    width: 200px;
+    height: 150px;
+    padding-left: 24px;
+    transform: translate(0px, 160px);
+    transform: translate(-424px, 151px);
+}
+.price{
+    color: black;
+    transform: translate(820px, 0px);
+}
+.button{
+    width: 70px;
+    height: 30px;
+    transform: translate(800px, 0px);
+    background-color: orange;
+
+}
+.icons{
+    width: 50px;
+    height: 50px;
+}
+.Dados {
+    text-align: left;
+    justify-content: space-around;
+}

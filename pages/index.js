@@ -26,7 +26,7 @@ const bunkers = [
       city: "Las Vegas",
       country: "United States"
     },
-    tags: ["eartquake", "iceage"]
+    tags: ["earthquake", "iceage"]
   },
   {
     imagePath: "/Bunker3/4A.jpg",

@@ -5,7 +5,7 @@ import styles from '../styles/HomePage.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { style } from '@mui/system';
-import { Style } from '@mui/icons-material';
+import { LogoutSharp, Style } from '@mui/icons-material';
 
 const bunkers = [
   {
@@ -16,7 +16,7 @@ const bunkers = [
       city: "Nantes",
       country: "France"
     },
-    tags: ["biochemical", "earthquake"]
+    tags: ["biochemical", "cyber"]
   },
   {
     imagePath: "/Bunker2/3a.jpg",
@@ -26,36 +26,74 @@ const bunkers = [
       city: "Las Vegas",
       country: "United States"
     },
-    tags: ["biochemical", "earthquake"]
+    tags: ["eartquake", "iceage"]
   },
   {
-    imagePath: "/Bunker3/a.jpg",
+    imagePath: "/Bunker3/4A.jpg",
     name: "THE SAFE HOUSE",
     price: "3 M",
     location: {
       city: "Warsam",
       country: "Poland"
     },
-    tags: ["biochemical", "earthquake"]
+    tags: ["meteoro", "missiles"]
   },
   {
-    imagePath: "/Bunker4/4A.jpg",
+    imagePath: "/Bunker4/B.jpg",
     name: "HOUSE PLAN B",
     price: "4.8 M",
     location: {
       city: "Ukrain",
     },
-    tags: ["biochemical", "earthquake"]
+    tags: ["nuclear", "solarflares", "earthquake"]
   },
   {
-    imagePath: "/Bunker5/B.jpg",
+    imagePath: "/Bunker5/a.jpg",
     name: "ARTEMIS PROTECTION",
     price: "500 000",
     location: {
       city: "Nantes",
       country: "France",
     },
-    tags: ["biochemical", "earthquake"]
+    tags: ["tsunami", "vulcanism", "cyber"]
+  },
+  {
+    imagePath: "/Bunker6/6a.jpg",
+    name: "THE OPPIDUM",
+    price: "8 M",
+    location: {
+      country: "Czech Republic",
+    },
+    tags: ["cyber", "earthquake", "nuclear"]
+  },
+  {
+    imagePath: "/Bunker7/2b.jpg",
+    name: "VIVOS XPOINT",
+    price: "40 000",
+    location: {
+      city: "Dakota",
+      country: "United States",
+    },
+    tags: ["vulcanism", "earthquake", "tsunami"]
+  },
+  {
+    imagePath: "/Bunker9/1b.jpg",
+    name: "DBX DOOMSDAY BUNKER",
+    price: "5.4 M",
+    location: {
+      city: "South Carolina",
+      country: "United States",
+    },
+    tags: ["cyber", "meteoro"]
+  },
+  {
+    imagePath: "/Bunker9/28.jpg",
+    name: "NOMAD BUNKER",
+    price: "600 000",
+    location: {
+      country: "Anywhere",
+    },
+    tags: ["vulcanism", "iceage", "tsunami"]
   }
 ]
 
@@ -63,8 +101,10 @@ function Header() {
   return (
     <div className={styles.header}
       style={{ backgroundImage: "url(/header.jpg)" }}>
-      <h1>LOOKING TO SURVIVE IN STYLE?</h1>
-      <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5>
+      <img src={"./logo.png"} className={styles.logo} />
+      <div><h1>LOOKING TO
+        SURVIVE IN STYLE?</h1>
+      <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5></div>
       <div className={styles.headeritem}>
       </div>
 
@@ -99,12 +139,31 @@ export default function Home() {
         <BunkerCard data={bunkers[2]}></BunkerCard>
         <BunkerCard data={bunkers[3]}></BunkerCard>
         <BunkerCard data={bunkers[4]}></BunkerCard>
+        <BunkerCard data={bunkers[5]}></BunkerCard>
+        <BunkerCard data={bunkers[6]}></BunkerCard>
+        <BunkerCard data={bunkers[7]}></BunkerCard>
+        <BunkerCard data={bunkers[8]}></BunkerCard>
 
       </div>
-      <div className={styles.body}>
+      <div className={styles.parte2}>
+        <p><h2>SURVIVE ANY CATASTROPHE</h2>
+          <h5>Everyday the chances of an extinction level event grows closer. Find out what possible catastrophes may possible be eminent and what they can cause in our lives.</h5></p>
+        <div className={styles.formas}>
+          <img src={"/Icones_Catastrofes/biochemical.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/cyber.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/earthquake.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/iceage.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/meteoro.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/missiles.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/nuclear.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/solarflares.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/tsunami.png"} className={styles.icones} />
+          <img src={"/Icones_Catastrofes/vulcanism.png"} className={styles.icones} />
 
 
+        </div>
       </div>
+
       <div className={styles.body}>
         <div className={styles.squares}>
 
@@ -120,18 +179,6 @@ export default function Home() {
 
       </div>
       <div className={styles.body}>
-
-
-        <div>
-          Preço: 500 000€<br></br>
-          Bunker: ARTEMIS PROTECTION<br></br>
-          Nantes, France
-        </div>
-        <div>
-          Preço: 8 M€<br></br>
-          Bunker: THE OPPIDUM<br></br>
-          Czech Republic
-        </div>
       </div>
       <div className={styles.body}>
         <div className={styles.squares}>
@@ -146,21 +193,8 @@ export default function Home() {
 
       </div>
       <div className={styles.body}>
-        <div>
-          Preço: 40 000 €<br></br>
-          Bunker: VIVOS XPOINT<br></br>
-          South Dakota, United States
-        </div>
-        <div>
-          Preço: 5.4M €<br></br>
-          Bunker: DBX DOOMSDAY BUNKER<br></br>
-          South Carolina, United States
-        </div>
-        <div>
-          <div>Preço: 600 000 €</div>
-          Bunker: NOMAD BUNKER
-          Anywhere
-        </div>
+
+
       </div>
     </div >
 
@@ -184,6 +218,7 @@ function BunkerCard({ data }) {
           <div className={style.Local}>{data.price} €</div>
         </div>
         <div className={styles.tags}>
+          {data.tags.map(t => <img src={`/Icones_Catastrofes/${t}.png`}></img>)}
         </div>
       </div>
     </div>

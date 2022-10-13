@@ -150,7 +150,6 @@
 
 .header h5 {
   color: white;
-  padding-top: 250px;
 }
 
 .BunkerImage img {
@@ -163,4 +162,46 @@
 
 .Dados {
   text-align: left;
+}
+
+.logo {
+  width: 100pxpx;
+  height: 100px;
+  position:relative; left: 0cm; bottom: ;
+}
+
+.icones {
+  width: 22%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-items: center;
+  
+
+}
+
+.formas {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+.parte2 h5 {
+  text-align: center;
+}
+
+.parte2 h2{
+  text-align: center;
+padding-top: 70px;
+}
+
+.tags img{
+ width: 30px;
+grid-row: auto;
 }

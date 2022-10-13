@@ -9,10 +9,12 @@ function Singup() {
  const [user,setUser] = useState ({ user : "",email : "" , password : "" , passwordConfirmation : "" , acceptsTerms : false })
  const [erro,setErro] = useState ("")
  const [mensagem,setMensagem] = useState("")
+ const [state,setState] = useState(false)
 
  const handleSubmit = async() => {
     setErro("")
   const  resultado =  await fazPedido("/api/signup/","POST",user)
+  const state = setState(resultado.body) 
 
   if(resultado.status === 400 ){
     setErro(resultado.body.message)
@@ -60,15 +62,29 @@ function Singup() {
        <div className={styles.terms}>
        <input type="checkbox" value={user.acceptsTerms} onChange={(e) => setUser(prevAuthValues => ({ ...prevAuthValues, acceptsTerms: e.target.checked }))}/>
        {erro.acceptsTerms && <div>{erro.acceptsTerms}</div>}
+       <label>Aceita os nosso termos</label>
 
-       <label for="">Aceita os nosso termos</label>
        </div>
-         <button type="submit" 
+       <span >{mensagem}</span>
+       <div className={styles.buttons}>
+       <button type="submit" 
+         onClick={ () =>  handleSubmit() }>SingUp</button> 
+        
+        {/*
+            state.body == 400 
+            ? 
+            <button type="submit" 
+         onClick={ () =>  handleSubmit() }>SingUp</button> 
+         :
+         <Link href="/"> <button type="submit" 
          onClick={ () =>  handleSubmit() }>SingUp</button>
-         <span>{mensagem}</span>
+         </Link>
+*/
+}  
         <Link href="/" ><button type="button" >Voltar</button></Link>
+        </div>
     </div>
-  
+   
 </div>    
      
     )

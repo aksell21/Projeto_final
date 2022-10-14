@@ -28,40 +28,39 @@
 }
 
 .button_login {
-  background-color: black;
+  background-color: transparent;
   /* Green */
-  border: none;
+  border: 1px solid orange;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  
+  transform: translate(990px, 0px)
 }
 
 .button_singup {
- 
-  background-color: black;
+ background-color: transparent;
   /* Green */
-  border: none;
+  border: 1px solid orange;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  transform: translate(-360px, 0px)
+  transform: translate(485px, 0px)
 }
 .button_perfil {
  
-  background-color: black;
+  background-color: transparent;
   /* Green */
-  border: none;
+  border: 1px solid orange;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  transform: translate(-350px, 0px)
+  transform: translate(355px, 0px)
 }
 
 .body {

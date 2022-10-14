@@ -25,7 +25,7 @@ function Login() {
 
     return (
    <div className={styles.container}> 
-
+    <h2>Login</h2>
       <div className={styles.LoginCard}>
       <label for="email">Email</label> 
             <input

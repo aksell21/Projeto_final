@@ -31,7 +31,7 @@ function Header() {
   return (
     <div className={styles.header}
     style={{ backgroundImage: "url(/header.jpg)" }}>
-    <img src={"./logo.png"} className={styles.logo} />
+    <img src={"../logo.png"} className={styles.logo} />
       <div className={styles.headeritem}>
       </div>
 

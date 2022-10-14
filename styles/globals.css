@@ -1,15 +1,12 @@
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
-
-=======
->>>>>>> 79be219b403a194aab3ae85d9cb48c37a30a9750
 body, html{
     margin: 0;
     padding: 0;
+    font-family: 'Archivo', sans-serif;
  }
 body {
     margin: 0;
-
 }
 body, html{
     margin: 0;

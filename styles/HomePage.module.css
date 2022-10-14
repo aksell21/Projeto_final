@@ -7,7 +7,7 @@
   background-position: center;
   height: 50vh;
   border: 0ch;
-  text-align: center;
+  text-align: center; 
 }
 
 .container_singup {
@@ -125,8 +125,6 @@
 
 
 
-
-
 .button_login {
   margin-left: 10cm;
   margin-bottom: 10cm;
@@ -152,7 +150,7 @@
 
 .BunkerImage img {
   max-width: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
   object-fit: cover;
   width: 230px;
   height: 230px;
@@ -207,4 +205,7 @@ grid-row: auto;
 
 .Dados{
   transform: translate(90px, 0px)
+}
+.container h2{
+  text-align: center;
 }

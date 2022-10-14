@@ -102,9 +102,9 @@ function Header() {
     <div className={styles.header}
       style={{ backgroundImage: "url(/header.jpg)" }}>
       <img src={"./logo.png"} className={styles.logo} />
-      <div><h1>LOOKING TO
+      <div className="textoHeader"><h1>LOOKING TO<br/>
         SURVIVE IN STYLE?</h1>
-      <h5>A.BUNKER has the best solutions to enjoy the end of days.</h5></div>
+      <h5>A.BUNKER is the best solutions to enjoy the end of days.</h5></div>
 
 
       
@@ -130,8 +130,7 @@ export default function Home() {
     <div className={styles.container}>
       <Header></Header>
 
-      <div><h2>Secure your own private bunker.</h2>
-        <h5>Our selection.</h5></div>
+      <div class="selection"><h2>Our selection</h2></div>
       <div className={styles.body}>
         <BunkerCard data={bunkers[0]}></BunkerCard>
         <BunkerCard data={bunkers[1]}></BunkerCard>
@@ -141,6 +140,7 @@ export default function Home() {
         <BunkerCard data={bunkers[5]}></BunkerCard>
         <BunkerCard data={bunkers[6]}></BunkerCard>
         <BunkerCard data={bunkers[7]}></BunkerCard>
+        <BunkerCard data={bunkers[8]}></BunkerCard>
         
 
       </div>

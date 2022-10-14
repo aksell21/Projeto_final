@@ -130,7 +130,7 @@ export default function Home() {
     <div className={styles.container}>
       <Header></Header>
 
-      <div class="selection"><h2>Our selection</h2></div>
+      <div className={styles.selection}><h2>Our selection</h2></div>
       <div className={styles.body}>
         <BunkerCard data={bunkers[0]}></BunkerCard>
         <BunkerCard data={bunkers[1]}></BunkerCard>
@@ -140,8 +140,6 @@ export default function Home() {
         <BunkerCard data={bunkers[5]}></BunkerCard>
         <BunkerCard data={bunkers[6]}></BunkerCard>
         <BunkerCard data={bunkers[7]}></BunkerCard>
-        <BunkerCard data={bunkers[8]}></BunkerCard>
-        
 
       </div>
       <div className={styles.parte2}>

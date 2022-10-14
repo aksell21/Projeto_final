@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { style } from '@mui/system';
 import { Style } from '@mui/icons-material';
+import { BunkerCard } from '../../components/BunkerCard'
 
 const bunkers = [
     {
@@ -77,44 +78,4 @@ function Icons({data}){
     return (
         <img src={data.imagePath} className={stylo.bunker2}/>
     )
-}
-
-function BunkerCard({ data }) {
-  return (
-    <div>
-      <div className={styles.upper}>
-        <div className={stylo.bunker}>
-        <img src={data.imagePath} className={stylo.bunker}/>
-        <img src={data.imagePath} className={stylo.bunker1}/>
-        <img src={data.imagePath} className={stylo.bunker1}/>
-        <img src={data.imagePath} className={stylo.bunker2}/>
-        <img src={data.imagePath} className={stylo.bunker2}/>
-        </div>
-      </div>
-      <div className={styles.lower}>
-        <div className={stylo.Dados}>
-            <h3 className={stylo.Nomes}>{data.name}<sub><div className={stylo.Preços}>{data.location.city}, {data.location.country}</div></sub></h3>
-            
-            
-            <div className={stylo.intro}>{data.intro}</div>
-            <div className={stylo.price}>{data.price} €</div>
-            <button className={stylo.button} onClick={() => alert("Comprado com sucesso")}>Buy Now</button>
-            <h2>Protection Against</h2>
-            <img src={data.tagB} className={stylo.icons}/>
-            <img src={data.tagE} className={stylo.icons}/>
-
-            <h2>Description</h2>
-            <div className={stylo.description}>{data.description}</div>
-            <div className={stylo.description}>{data.description}</div>
-            <div className={stylo.description}>{data.description}</div>
-            <h2>Have any questions?</h2>
-            <div className={stylo.description}>{data.help}</div>
-            <button onClick={() => alert("Contactado com sucesso")}>a.bunker@bunker.com</button>
-        </div>
-        <div className={styles.tags}>
-        </div>
-      </div>
-    </div>
-
-  )
 }

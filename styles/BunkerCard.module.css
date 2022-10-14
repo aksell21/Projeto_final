@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    border-radius: 5px;
 }
 .bunker1{
     width: 200px;
@@ -56,12 +58,14 @@
 .upper {
     display: flex;
     flex-direction: row;
-    background-color: red;
 }
 
-.bunker1 img{
-    width: inherit;
-    height: inherit;
+.rightImages {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    min-width: 500px;
+    flex-wrap: wrap;
 }
 
 .rightIMAGE {

@@ -102,7 +102,7 @@
   flex-wrap: wrap;
   gap: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: auto;
   max-width: 1200px;
 
@@ -142,10 +142,16 @@
   padding-top: 70px;
   text-align: left;
   text-align: justify;
+  position:relative; top: 60px; left: -100px; 
+
 }
 
 .header h5 {
   color: white;
+  position:relative; top: 60px; left: -100px;
+  text-align: justify;
+
+
 }
 
 .BunkerImage img {
@@ -157,13 +163,13 @@
 }
 
 .Dados {
-  text-align: left;
+  text-align: center;
 }
 
 .logo {
-  width: 100pxpx;
-  height: 100px;
-  position:relative; left: 0cm; 
+  width: 200px;
+  height: 200px;
+  position:relative; top: -60px; left: -20px; 
 }
 
 .icones {
@@ -203,9 +209,7 @@ padding-top: 70px;
 grid-row: auto;
 }
 
-.Dados{
-  transform: translate(90px, 0px)
-}
+
 .container h2{
   text-align: center;
 }

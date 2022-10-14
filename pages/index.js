@@ -145,8 +145,8 @@ export default function Home() {
 
       </div>
       <div className={styles.parte2}>
-        <p><h2>SURVIVE ANY CATASTROPHE</h2>
-          <h5>Everyday the chances of an extinction level event grows closer. Find out what possible catastrophes may possible be eminent and what they can cause in our lives.</h5></p>
+        <h2>SURVIVE ANY CATASTROPHE</h2>
+          <h5>Everyday the chances of an extinction level event grows closer. Find out what possible catastrophes may possible be eminent and what they can cause in our lives.</h5>
         <div className={styles.formas}>
           <img src={"/Icones_Catastrofes/biochemical.png"} className={styles.icones} />
           <img src={"/Icones_Catastrofes/cyber.png"} className={styles.icones} />

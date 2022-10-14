@@ -1,119 +1,82 @@
-import { useState } from 'react'
-import Login from './Login'
-import Singup from './Singup'
-import styles from '../styles/HomePage.module.css'
-import stylo from '../styles/bunkerPage.module.css'
-import SearchIcon from '@mui/icons-material/Search';
+import styles from '../styles/ProfilePage.module.css'
+import { useState } from "react";
 import Link from 'next/link';
-import { style } from '@mui/system';
-import { Style } from '@mui/icons-material';
+import { fazPedido } from '../pages/src/Utils/res'
+import { Message, SettingsPowerRounded } from '@mui/icons-material';
+import { useRouter } from 'next/router';
 
-const bunkers = [
-  {
-    imagePath: "/Bunker1/1a.jpg",
-    intro: "Not only for survival shelter but it is also planned as completely self-sufficient second home",
-    name: "VIVOS EUROPA ONE",
-    price: "2.2 M",
-    description: "É um bunker em frança onde pode desfrutar de umas belas férias longe da humanidade e para sobreviver a catastrofes como terramoto ou radiação.",
-    container: "10 GUESTS•2 BEDROOMS•2 BATHS• GREEN HOUSE",
-    location: {
-      city: "Nantes",
-      country: "France"
-    },
-    tags: ["biochemical", "earthquake"],
-    help: "Feel free to contact us, for any question you might have. Our team is always avaiable to help you find a secure space for you and your loved ones to survive doomsday."
-  },
-]
+function Profile() {
+  const router = useRouter()
+  const [user, setUser] = useState({ user: "aaa", email: "a@gmail.com", password: "Aaaaaaa1" })
+  let [a, setA] = useState({ user: "aaa", email: "a@gmail.com", password: "Aaaaaaa1" })
+  const [editavel, setEditavel] = useState(true)
+  const [mensagem, setMensagem] = useState("Editar")
+  const [cancel, setCancel] = useState("Voltar")
+  let input = user.user
+  function edita(aa){
+    if(aa == true){
+      setEditavel(false)
+      setMensagem("Confirmar")
+      setCancel("Cancelar")
+      console.log(aa)
+      return aa
+    }
+    else if (aa == false){
+      alert("Changes complete")
+      setEditavel(true)
+      setMensagem("Editar")
+      setCancel("Voltar")
+      console.log(aa)
+      return aa
+    }
+  }
 
-function Header() {
+  function cancela(aa){
+    let string = a.user
+    if(aa == "Cancelar"){
+      console.log(user.user)
+      string = setA(user.user)
+      setEditavel(true)
+      setMensagem("Editar")
+      setCancel("Voltar")
+      console.log(string)
+      return aa
+    }
+    else if(aa == "Voltar"){
+      return window.location.href = "/"
+    }
+  }
   return (
-    <div className={styles.header}
-      style={{ backgroundImage: "url(/header.jpg)" }}>
-      <div className={styles.headeritem}>
-      </div>
+    <div className={styles.container_singup}>
+      <div className={styles.rowFora}>
+        <div className={styles.row}>
+          <label>Name</label>
+          <input
+          disabled={editavel}
+            type="text" defaultValue={a.user}
+            /><br></br>
 
-      <div className={styles.searchBar}>
-        <div className={styles.search}>
-          <SearchIcon />
-          <input type="text" placeholder="Search.." />
+          <label>Email</label>
+          <input
+          disabled={editavel}
+            type="text"
+            defaultValue={a.email}/><br></br>
+          <label>Password</label>
+          <input
+          disabled={editavel}
+            type="text"
+            className="name" defaultValue={a.password} />
+          
+          <div className={styles.buttons}>
+            <button
+              onClick={() => edita(editavel)}>{mensagem}</button>
+            <button type="button" onClick={() => cancela(cancel)}>{cancel}</button>
+          </div>
         </div>
       </div>
-
-      <div className={styles.login}>
-        <Link href={'/Login'}><button className={styles.button_login}>Login</button></Link>
-        <Link href={'/Singup'}><button className={styles.button_singup}>Sign Up</button></Link>
-        <Link href={'/Perfil'}><button className={styles.button_singup}>Perfil</button></Link>
-
-      </div>
-
     </div>
   )
 }
+export default Profile
 
-export default function Home() {
-
-  return (
-    <div className={styles.container}>
-      <Header></Header>
-      <div className={styles.body}>
-        <BunkerCard data={bunkers[0]}></BunkerCard>
-
-      </div>
-      <div className={styles.body}>
-
-
-      </div>
-    </div >
-
-
-  )
-}
-
-function Icons({data}){
-    let logo = "/Bunker1/1a.jpg"
-    let logo1 = "../public/Bunker1/1a.jpg"
-    let tag = [logo, logo1]
-    return (
-        <img src={data.imagePath} className={stylo.bunker2}/>
-    )
-}
-
-function BunkerCard({ data }) {
-  return (
-    <div>
-      <div className={styles.upper}>
-        <div className={stylo.bunker}>
-        <img src={data.imagePath} className={stylo.bunker}/>
-        <img src={data.imagePath} className={stylo.bunker1}/>
-        <img src={data.imagePath} className={stylo.bunker1}/>
-        <img src={data.imagePath} className={stylo.bunker2}/>
-        <img src={data.imagePath} className={stylo.bunker2}/>
-        </div>
-      </div>
-      <div className={styles.lower}>
-        <div className={stylo.Dados}>
-            <h3 className={stylo.Nomes}>{data.name}<sub><div className={stylo.Preços}>{data.location.city}, {data.location.country}</div></sub></h3>
-            
-            
-            <div className={stylo.intro}>{data.intro}</div>
-            <div className={stylo.price}>{data.price} €</div>
-            <button className={stylo.button} onClick={() => alert("Comprado com sucesso")}>Buy Now</button>
-            <h2>Protection Against</h2>
-            <img src={data.imagePath} className={stylo.icons}/>
-            <img src={data.imagePath} className={stylo.icons}/>
-
-            <h2>Description</h2>
-            <div className={stylo.description}>{data.description}</div>
-            <div className={stylo.description}>{data.description}</div>
-            <div className={stylo.description}>{data.description}</div>
-            <h2>Have any questions?</h2>
-            <div className={stylo.description}>{data.help}</div>
-            <button onClick={() => alert("Contactado com sucesso")}>a.bunker@bunker.com</button>
-        </div>
-        <div className={styles.tags}>
-        </div>
-      </div>
-    </div>
-
-  )
-}
+//

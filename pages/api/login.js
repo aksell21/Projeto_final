@@ -12,9 +12,9 @@ export default async function (req, res) {
         const user = await getUserByEmail(email)
         if (!user) {
             return res
-                .status(404)
+                .status(401)
                 .json({
-                    "message": "O utilizador não foi encontrado!"
+                    "message": "O email introduzida é inválido!"
                 })
         }
         if (user.password !== password) {
@@ -25,8 +25,11 @@ export default async function (req, res) {
                 })
 
         }
-       const token = await addSession(user._id)
-       res.status(200).json({token})
+        else if(email == user.email && password == user.password){
+           const token = await addSession(user._id)
+           res.status(200).json({token})
+        }
+        
       
 
     }

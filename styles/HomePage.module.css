@@ -96,13 +96,13 @@
 .body {
   padding: 5px;
   text-align: center;
-  margin: 6px auto;
+  margin: 2px auto;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: auto;
   max-width: 1200px;
 
